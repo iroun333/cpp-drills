@@ -57,3 +57,14 @@
       "testPresets": []
     }
     ```
+  - ビルド
+    ```
+    # ビルド：VSCode
+    	□ VS Code の「CMake: Configure Preset → debug」→「Build」でOK。
+    	□ src/に day03_xxx.cpp を置くだけで自動でターゲット追加されます。
+    # ビルド：手動
+    	mkdir -p build && cd build
+    	cmake -S .. -B . -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo
+    	cmake --build . -j
+      ctest -j
+    ```
